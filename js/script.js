@@ -49,7 +49,7 @@ ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 var aboutTyped = new Typed('.about-typed-text', {
-    strings: ['Web Developer', 'Data Scientist', 'AI Engineer'],
+    strings: ['AI Engineer', 'Web Developer', 'Data Scientist'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,

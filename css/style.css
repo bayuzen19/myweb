@@ -292,6 +292,10 @@ span {
     font-weight: 600;
 }
 
+.about-content h3 span {
+    color: var(--text-color) !important;
+}
+
 /* Services Section Design */
 .services h2 {
     margin-bottom: 5rem;
