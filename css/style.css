@@ -305,33 +305,62 @@ span {
     gap: 2rem;
 }
 
-.services-container .services-box {
-    flex: 1 1 30rem;
+/* Skills Marquee Design */
+.skills-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.skills-marquee {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 25px;
-    text-align: center;
-    border: none;
-    transition: .5s ease;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    min-width: 12rem;
+    border: .1rem solid var(--main-color);
+    transition: 0.3s;
 }
 
-.services-container .services-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.02);
+.skill-item:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
-.services-box i {
-    font-size: 7rem;
-    color: var(--main-color);
+.skill-item i,
+.skill-item svg,
+.skill-item img {
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    fill: currentColor;
+    object-fit: contain;
 }
 
-.services-box h3 {
-    font-size: 2.6rem;
-}
-
-.services-box p {
+.skill-item span {
     font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - 2rem)); /* Scroll half the content (original set) */
+    }
 }
 
 .services-box p:nth-child(3) {
